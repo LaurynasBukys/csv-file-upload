@@ -9,4 +9,5 @@ const upload = (data) => {
   return axios.post("http://localhost:8080/upload", data);
 };
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default { getAll, upload };

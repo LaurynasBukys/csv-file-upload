@@ -2,12 +2,24 @@
     margin-top: 20px;
     min-height: 4vh;
     min-width: 15vh;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
+    border: 3px solid black ;
     text-align: center;
-    /* justify-content: center; */
     font-size: calc(10px + 2vmin);
     color: rgb(14, 14, 14);
-    border-radius: 5px;
   }
+
+.FileUpload {
+    margin: auto;
+    padding-left: 10px;
+    min-height: 4vh;
+    width: 35vh;
+    font-size: calc(4px + 2vmin);
+    color: rgb(14, 14, 14);
+    border: 2px solid black ;
+    padding: auto;
+}  
+
+.mtb-2 {
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+}

@@ -3,7 +3,7 @@ import employeeService from "../services/upload-files.service";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./table.css"
 
-const AppTesting = () => {
+const EmployeesTable = () => {
   const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
@@ -26,19 +26,19 @@ const AppTesting = () => {
     <div className="container row justify-content-center">
       <table className="table table-striped table-bordered table-responsive w-75">
         {/* <thead style={{ backgroundColor: "darkgrey" }}> */}
-        <thead className="Header">
+        <thead key="thead" className="Header">
             <tr>
-                <th class="align-middle">Name</th>
-                <th class="align-middle">Email</th>
-                <th class="align-middle">Phone Number</th>
+                <th className="align-middle">Name</th>
+                <th className="align-middle">Email</th>
+                <th className="align-middle">Phone Number</th>
             </tr>  
         </thead>
         <tbody>
           {employees.map((employee) => (
-            <tr key={employee.id} class="align-middle" className="Row">
-              <td class="align-middle">{employee.name}</td>
-              <td class="align-middle">{employee.email}</td>
-              <td class="align-middle">{employee.phone}</td>
+            <tr key={employee.id} className="align-middle Row" >
+              <td className="align-middle">{employee.name}</td>
+              <td className="align-middle">{employee.email}</td>
+              <td className="align-middle">{employee.phone}</td>
             </tr>
           ))}
         </tbody>
@@ -47,4 +47,4 @@ const AppTesting = () => {
   );
 };
 
-export default AppTesting;
+export default EmployeesTable;

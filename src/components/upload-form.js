@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+
 import employeeService from "../services/upload-files.service";
 import './upload-Form.css'
+
 
 const UploadForm = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -19,6 +21,7 @@ const UploadForm = () => {
       .catch((error) => console.log(error));
     window.location.reload(false);
   };
+  
 
   const handleFileSelect = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -30,13 +33,24 @@ const UploadForm = () => {
       <br />
       <br />
       <form onSubmit={handleSubmit}>
+      <div >
+        <label htmlFor="files"  className="input-group FileUpload"  >
+           {selectedFile ? (
+            <p className="mtb-2">{selectedFile.name}</p>
+                ) : (
+            <p className="mtb-2">Select file...</p>
+                )}
+        </label>
+      </div>     
         <input
           type="file"
-          id="file"
+          id="files"
           name="file"
           accept=".csv"
+          style={{ visibility: "hidden" }}
           onChange={handleFileSelect}
         />
+        
         <div>
            <input type="submit" value="Upload" className="border border-dark Button" />
         </div>
