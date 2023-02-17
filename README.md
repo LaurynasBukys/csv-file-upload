@@ -1,8 +1,8 @@
 # csv file upload task
 
-CSV File Upload in React, passing file to Spring Boot, writing in to H2 memorybase, then fetching data to React HTML table.
-Main goal to upload employees data to memorybase, and get it visualised in a HTML table.
-This project consists of two applications: one is a Spring Boot Rest API called  backend-spring and another is a ReactJS application called frontend-react. 
+- Upload CSV File in React, pass the file to Spring Boot, write the data into H2 memorybase, then fetch the data to React HTML table.
+The main goal is to upload employees data to memorybase and get it visualised in a HTML table.
+This project consists of two applications: one is a Spring Boot Rest API called  backend-spring-boot (csv-file-upload-springboot) and another is a ReactJS application called frontend-react (csv-file-upload-react). 
 
 ## csv-file-upload-springboot
 
@@ -16,7 +16,7 @@ This project consists of two applications: one is a Spring Boot Rest API called 
 
 ### for this project we use H2 database:
 
-- After you start backend application, tehere will creates table "EMPLOYEES" and you can access your H2 memory db:
+- After you start backend application, the table "EMPLOYEES" will be created and you can access your H2 memory db:
 
 <pre>http://localhost:8080/h2-console</pre>
 
@@ -28,12 +28,12 @@ This project consists of two applications: one is a Spring Boot Rest API called 
 
 ### Backend application
 
-Navigate in your browser to (or change to port if it is used):
+- Navigate in your browser to (or change to port if it is used):
 <pre>http://localhost:8080/employees</pre>
 
 ### Frontend application
 
-When you start react application, this will automatically open a new webpage in your default browser or you can manually
+- When you start react application, this will automatically open a new webpage in your default browser or you can manually
 navigate in your browser to (change to other port if it is used):
 <pre>http://localhost:3000</pre>
 
